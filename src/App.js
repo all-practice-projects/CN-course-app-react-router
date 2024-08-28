@@ -4,6 +4,7 @@ import Nav from "./components/nav/Nav";
 import Courses from "./pages/app/courses/Courses";
 import Details from "./pages/app/details/Details";
 import Learn from "./pages/app/learn/Learn";
+import Chapter from "./pages/app/chapter/Chapter";
 
 function App() {
 
@@ -19,7 +20,13 @@ function App() {
             {path:"/courses", element:<Courses/>},
             {path:":courseId", element:<Details/>}
         ]},
-        {path:"/learn/:courseId", element:<Learn/>}   //child of Nav, but not the child of course
+        {                                                 
+          path:"/learn/:courseId",                        //child of Nav, but not the child of course
+          element:<Learn/>,
+          children:[
+            {path:"chapter/:chapterId", element:<Chapter/>}  //child of learn
+          ]
+        }   
       ]
     }
   ])
