@@ -22,7 +22,7 @@ function Chapter() {
         <iframe
           width="800"
           height="560"
-          src=""
+          src={chapter.video}
           title="React Video"
           frameborder="1"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
