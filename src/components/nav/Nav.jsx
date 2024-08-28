@@ -1,9 +1,11 @@
 import React from "react";
 import style from "./Nav.module.css";
+import { Outlet } from "react-router-dom";
 
 function Nav() {
   return (
-    <nav>
+    <>
+      <nav>
       <div className={style.nav_container}>
         <div className={style.nav_title_wrapper}>
           <img
@@ -18,6 +20,8 @@ function Nav() {
         </div>
       </div>
     </nav>
+    <Outlet/>
+    </>
   );
 }
 
